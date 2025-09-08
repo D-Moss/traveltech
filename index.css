@@ -6,6 +6,7 @@ body {
 	line-height: 1.6;
 }
 
+/*HEADER SECTION*/
 .hero {
 	background-image: url(images/wool.jpg);
 	background-size: cover;
@@ -35,4 +36,14 @@ body {
 	border-radius: 8px;
 	border: none;
 	cursor: pointer;
+}
+
+/*INTRODUCTION SECTION*/
+.intro {
+	text-align: center;
+}
+
+.intro p {
+	margin: 25px auto;
+	max-width: 600px;
 }
