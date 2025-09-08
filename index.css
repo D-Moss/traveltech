@@ -7,21 +7,32 @@ body {
 }
 
 .hero {
-	background: url(images/wool.jpg) no-repeat center;
+	background-image: url(images/wool.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .big-block {
 	margin: 75px auto;
 	padding: 40px;
-	background-color: darkgrey;
+	background-color: rgba(60, 60, 60, 0.8);
 	color: white;
 	text-align: center;
 	border-radius: 12px;
-	max-width: 50%;
+	max-width: 600px;
 }
 
 .header-btn {
-	padding: 9px 25px;
+	margin-top: 15px;
+	padding: 10px 25px;
+	background-color: white;
+	color: #333;
+	font-weight: bold;
 	border-radius: 8px;
 	border: none;
+	cursor: pointer;
 }
