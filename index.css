@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	background-color: #f9f9f9;
+	color: #333;
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+}
+
+.hero {
+	background: url(images/wool.jpg) no-repeat center;
+}
+
+.big-block {
+	margin: 75px auto;
+	padding: 40px;
+	background-color: darkgrey;
+	color: white;
+	text-align: center;
+	border-radius: 12px;
+	max-width: 50%;
+}
+
+.header-btn {
+	padding: 9px 25px;
+	border-radius: 8px;
+	border: none;
+}
