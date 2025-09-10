@@ -10,9 +10,7 @@
 	<!--HEADER SECTION-->
 	<header class="hero">
 		<div class="big-block">
-			<h1>
-				Adventures Powered by Tech
-			</h1>
+			<h1>Adventures Powered by Tech</h1>
 			<p>
 				Travel stories, Vegas vibes, and the Samsung gear that makes it all possible
 			</p>
@@ -22,31 +20,109 @@
 		</div>
 	</header>
 
-	<!--WELCOME SECTION-->
-	<section class="intro">
-		<h2>Welcome</h2>
-		<p>
-			Hi, I'm Diona Moss! I love exploring new destinations - from local hidden gems to Vegas adventures - and I never travel anywhere without my Samsung gear. This site is where I share my trips and stories.
-		</p>
-	</section>
-	
-	<!--FEATURED DESTINATIONS-->
-	<section class="destinations">
-		<h2>Featured Destinations</h2>
-		<div class="grid">
-			<div class="card">
-				<img src="images/toven.png">
-				<h3>Vegas</h3>
-			</div>
-			<div class="card">
-				<img src="images/clock.png">
-				<h3>New York</h3>
-			</div>
-			<div class="card">
-				<img src="images/tovanas.png">
-				<h3>Staybridge Suites East Stroudsburg</h3>
-			</div>
+	<!--NAVIGATION BAR-->
+	<nav class="navbar">
+		<div class="nav-container">
+			<a href="index.html" class="logo">Site Name</a>
+
+			<!--HAMBURGER ALWAYS OUTSIDE NAV-LINKS-->
+			<div class="hamburger">&#9776;</div>
+			<ul class="nav-links">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="destinations.html">Destinations</a>
+				</li>
+				<li>
+					<a href="about.html">About Me</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+				<li>
+					<button class="close-btn">&times;</button>
+				</li>
+			</ul>
 		</div>
-	</section>
+	</nav>
+
+	<!--MAIN SECTION-->
+	<main class="homepage">
+		<div class="content">
+			<!--WELCOME SECTION-->
+			<section class="intro">
+				<h2>Welcome</h2>
+				<p>
+					Hi, I'm Diona Moss! I love exploring new destinations - from local hidden gems to Vegas adventures - and I never travel anywhere without my Samsung gear. This site is where I share my trips and stories.
+				</p>
+			</section>
+
+			<!--FEATURED DESTINATIONS-->
+			<section class="destinations">
+				<h2>Featured Destinations</h2>
+				<div class="grid">
+					<div class="card">
+						<img src="images/toven.png">
+						<h3>Vegas</h3>
+					</div>
+					<div class="card">
+						<img src="images/clock.png">
+						<h3>New York</h3>
+					</div>
+					<div class="card coming-soon">
+						<img src="images/tovanas.png">
+						<h3>Staybridge Suites East Stroudsburg</h3>
+					</div>
+				</div>
+			</section>
+
+			<!--MOST RECENT STORIES-->
+			<section class="recent-stories">
+				<h2>Most Recent Stories</h2>
+				<div class="stories-grid">
+					<article class="story-card">
+						<img src="images/clock.png" alt="">
+						<div class="story-content">
+							<h3>Story Title</h3>
+							<p>
+								Some content will go here about the trip that I went on. Just a few sentences as an intro.
+							</p>
+						</div>
+					</article>
+
+					<article class="story-card">
+						<img src="images/toven.png" alt="">
+						<div class="story-content">
+							<h3>Story Title</h3>
+							<p>
+								Some content will go here about the trip that I went on. Just a few sentences as an intro.
+							</p>
+						</div>
+					</article>
+				</div>
+
+				<a href="destinations.html" class="btn read-more">Read More</a>
+			</section>
+		</div>
+
+		<!--SIDEBAR-->
+		<aside class="sidebar">
+			<section class="about-preview">
+				<h2>About Me</h2>
+				<img src="images/IMG_7871.jpg" alt="Diona Moss">
+				<p>
+					Hi, I'm Diona! I share my travel adventures and the Samsung gear that makes it possible.
+				</p>
+				<a href="about.html" class="btn">Read More</a>
+				<div class="socials">
+					<a href="#">Instagram</a>
+					<a href="#">Instagram</a>
+				</div>
+			</section>
+		</aside>
+	</main>
+
+	<script src="index.js"></script>
 </body>
 </html>

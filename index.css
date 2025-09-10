@@ -8,9 +8,7 @@ body {
 
 /*HEADER SECTION*/
 .hero {
-	background-image: url(images/wool.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: url(images/wool.jpg) no-repeat center/cover;
 	height: 60vh;
 	display: flex;
 	justify-content: center;
@@ -36,9 +34,91 @@ body {
 	border-radius: 8px;
 	border: none;
 	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
 }
 
-/*INTRODUCTION SECTION*/
+.header-btn:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+/*NAVIGATION BAR*/
+.navbar {
+	background-color: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	position: sticky;
+	top: 0;
+	opacity: 0;
+	transition: opacity 0.6s;
+	z-index: 1000;
+}
+
+.navbar.visible {
+	opacity: 1;
+}
+
+.nav-container {
+	margin: 0 auto;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+}
+
+.logo {
+	color: #333;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+}
+
+.nav-links li a {
+	color: #333;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+	color: #0077cc;
+}
+
+.hamburger {
+	font-size: 24px;
+	display: none;
+	cursor: pointer;
+}
+
+.close-btn {
+	background-color: none;
+	color: #333;
+	border: none;
+	font-size: 28px;
+	font-weight: bold;
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
+
+/*MAIN CONTENT*/
+.homepage {
+	margin: 40px auto;
+	padding: 0 20px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 40px;
+	max-width: 1200px;
+}
+
 .intro {
 	margin: 0 auto;
 	padding: 40px 20px;
@@ -54,7 +134,7 @@ body {
 .grid {
 	margin-top: 20px;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 }
 
@@ -63,15 +143,168 @@ body {
 	border-radius: 12px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
+	position: relative;
 }
 
 .card img {
 	width: 100%;
 	height: 180px;
+	display: block;
 	object-fit: cover;
 }
 
 .card h3 {
 	margin: 0;
 	padding: 15px;
+}
+
+.card.coming-soon img {
+	opacity: 0.5;
+	filter: grayscale(70%);
+}
+
+.card.coming-soon::after {
+	padding: 10px 20px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 8px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: "Coming Soon";
+}
+
+.recent-stories {
+	padding: 40px 20px;
+	text-align: center;
+}
+
+.recent-stories h2 {
+	margin-bottom: 20px;
+}
+
+.stories-grid {
+	margin-bottom: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.story-card {
+	background-color: white;
+	text-align: left;
+	border-radius: 12px;
+	box-shadow: 0 4px 6ps rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.story-card img {
+	height: 180px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.story-content {
+	padding: 15px;
+}
+
+.story-content h3 {
+	margin: 0 0 10px;
+}
+
+.story-content p {
+	margin: 0;
+	color: #555;
+	font-size: 0.95rem;
+}
+
+.read-more {
+	margin-top: 10px;
+	display: inline-block;
+}
+
+/*SIDEBAR*/
+.sidebar {
+	padding: 20px;
+	background-color: white;
+	text-align: center;
+	border-radius: 12px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img {
+	margin-bottom: 15px;
+	border-radius: 50%;
+	height: 120px;
+	width: 120px;
+	object-fit: cover;
+}
+
+.btn {
+	margin-top: 15px;
+	padding: 10px 20px;
+	background-color: #0077cc;
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+	display: inline-block;
+	transition: background-color 0.3s;
+}
+
+.btn:hover {
+	background-color: #005fa3;
+}
+
+/*RESPONSIVENESS*/
+@media (max-width: 768px) {
+	.hamburger {
+		display: block;
+		cursor: pointer;
+	}
+	.nav-links {
+		padding-top: 60px;
+		background-color: #fff;
+		box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		right: -250px;
+		width: 200px;
+		height: 100%;
+		transition: right 0.3s ease-in-out;
+	}
+	.nav-links.active {
+		right: 0;
+	}
+	.nav-links.active .close-btn {
+		display: block;
+	}
+	
+	.homepage {
+		grid-template-columns: 1fr;
+	}
+	.content {
+		order: 1;
+	}
+	.grid {
+		grid-template-columns: 1fr;
+	}
+	.stories-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.sidebar {
+		margin-top: 20px;
+		order: 2;
+	}
+}
+
+@media (min-width: 769px) {
+	.close-btn {
+		display: none;
+	}
 }
