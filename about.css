@@ -1,0 +1,96 @@
+.about-page {
+	margin: 40px auto;
+	padding: 0 20px;
+	max-width: 1200px;
+}
+
+.about-page h1 {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.about-container {
+	display: flex;
+	gap: 40px;
+	align-items: stretch;
+}
+
+.about-left {
+	text-align: left;
+	flex: 1;
+}
+
+.about-left img {
+	margin-bottom: 20px;
+	border-radius: 12px;
+	height: 200px;
+	width: 300px;
+	/*border-radius: 50%;
+	height: 150px;
+	width: 150px;*/
+	object-fit: cover;
+}
+
+.contact-list {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	list-style: none;
+}
+
+.contact-list li {
+	margin-bottom: 12px;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.contact-list i {
+	color: #0077cc;
+	text-align: center;
+	font-size: 1.2rem;
+	width: 20px;
+}
+
+.contact-list a {
+	color: #333;
+	text-decoration: none;
+}
+
+.contact-list a:hover {
+	text-decoration: underline;
+}
+
+.about-divider {
+	background-color: #ddd;
+	width: 2px;
+	flex-shrink: 0;
+}
+
+.about-right {
+	flex: 2;
+}
+
+.about-right h2 {
+	margin-top: 0;
+}
+
+.tech-list {
+	padding: 0;
+	list-style: none;
+}
+
+.tech-list li {
+	margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.about-container {
+		flex-direction: column;
+	}
+	.about-divider {
+		display: none;
+	}
+}
