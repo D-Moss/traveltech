@@ -1,3 +1,8 @@
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0;
 	background-color: #f9f9f9;
@@ -8,21 +13,16 @@ body {
 
 /*HEADER SECTION*/
 .hero {
-	background: url(images/wool.jpg) no-repeat center/cover;
-	height: 60vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 40vh;
 }
 
 .big-block {
-	margin: 75px auto;
-	padding: 40px;
-	background-color: rgba(60, 60, 60, 0.8);
+	padding: 30px;
+	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
 	text-align: center;
-	border-radius: 12px;
-	max-width: 600px;
+	/*border-radius: 12px;
+	max-width: 600px;*/
 }
 
 .scroll-arrow {
@@ -128,8 +128,34 @@ body {
 .intro {
 	margin: 0 auto;
 	padding: 40px 20px;
+	background: url('images/chat-2.png') no-repeat center/cover; /* only the image */
+	color: white;
 	text-align: center;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 350px;
 	max-width: 700px;
+	position: relative;
+	overflow: hidden;
+}
+
+.intro::before { /* The overlay tint */
+	background: rgba(0, 120, 200, 0.3); /* blue overlay */
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.intro h2,
+.intro p {
+	position: relative;
+	z-index: 2;
 }
 
 .destinations {
