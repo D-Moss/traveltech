@@ -13,16 +13,45 @@ body {
 
 /*HEADER SECTION*/
 .hero {
-	height: 40vh;
+	background: url(images/gettyimages-1424301376-612x612.jpg) no-repeat center/cover;
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: 50vh;
+}
+
+.hero::before {
+	background-color: rgba(0, 120, 200, 0.18);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	z-index: 1;
 }
 
 .big-block {
-	padding: 30px;
-	background-color: rgba(0, 0, 0, 0.6);
+	margin: 0 auto;
+	padding: 20px 30px;
+	background-color: transparent;
 	color: white;
 	text-align: center;
-	/*border-radius: 12px;
-	max-width: 600px;*/
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	border-radius: 12px;
+	max-width: 600px;
+	position: relative;
+	z-index: 2;
+}
+
+.big-block h1 {
+	margin-bottom: 10px;
+	font-size: 2.8rem;
+}
+
+.big-block p {
+	margin: 0 auto;
+	font-size: 1.2rem;
 }
 
 .scroll-arrow {
@@ -135,7 +164,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 350px;
+	min-height: 400px;
 	max-width: 700px;
 	position: relative;
 	overflow: hidden;
@@ -152,12 +181,25 @@ body {
 	z-index: 1;
 }
 
-.intro h2,
-.intro p {
+.intro h2 {
+	margin-top: 20px;
+	font-size: 2.2rem;
+	font-weight: 700;
+	letter-spacing: 1px;
 	position: relative;
 	z-index: 2;
 }
 
+.intro p {
+	margin-bottom: 20px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	position: relative;
+	z-index: 2;
+}
+
+/*Destinations*/
 .destinations {
 	padding: 40px 20px;
 	text-align: center;
@@ -326,6 +368,12 @@ body {
 	}
 	.content {
 		order: 1;
+	}
+	.intro h2 {
+		font-size: 1.6rem;
+	}
+	.intro p {
+		font-size: 0.9rem;
 	}
 	.grid {
 		grid-template-columns: 1fr;
