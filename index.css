@@ -67,7 +67,7 @@ body {
 	border-radius: .375rem;
 	display: inline-block;
 	outline: none;
-	box-shadow: 0 4px 12px rgba(0, 119, 204, 0.4), 0 6px #999;
+	box-shadow: 0 .25rem .75rem rgba(0, 119, 204, 0.4), 0 .375rem #999;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
@@ -414,3 +414,38 @@ body {
 }
 
 /*RESPONSIVENESS*/
+@media (max-width: 992px) {
+	.hero {
+		height: 40vh;
+	}
+	.big-block h1 {
+		font-size: 2.2rem;
+	}
+	.big-block p {
+		font-size: 1rem;
+	}
+	.btn {
+		padding: 0.45rem .9rem;
+		font-size: .85rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.hero {
+		height: 35vh;
+	}
+	.big-block {
+		padding: 1rem;
+	}
+	.big-block h1 {
+		font-size: 1.8rem;
+	}
+	.big-block p {
+		font-size: .9rem;
+	}
+	.btn {
+		padding: .4rem .8rem;
+		font-size: .8rem;
+		box-shadow: 0 .2rem .5rem rgba(0, 119, 204, .3), 0 .3rem #777;
+	}
+}
